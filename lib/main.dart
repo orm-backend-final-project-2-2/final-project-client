@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:codefit/views/main_screen.dart';
+import 'package:codefit/views/screens/main_screen.dart';
 
 void main() {
   runApp(const CodeFitApp());
