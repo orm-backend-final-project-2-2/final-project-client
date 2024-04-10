@@ -1,3 +1,4 @@
+import 'package:codefit/views/widgets/common/contents/home_content.dart';
 import 'package:flutter/material.dart';
 
 class MainContent extends StatelessWidget {
@@ -5,12 +6,11 @@ class MainContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 1000,
-      color: Colors.white,
-      child: const Center(
-        child: Text('Main Content'),
-      ),
+
+    return const SizedBox(
+      width: 1200,
+      height: 800,
+      child: HomeContent(),
     );
   }
 }
