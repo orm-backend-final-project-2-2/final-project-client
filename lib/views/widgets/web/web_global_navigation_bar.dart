@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class WebGlobalNavigationBar extends StatelessWidget {
+class WebGlobalNavigationBar extends ConsumerWidget {
   final List<WebGlobalNavigationBarItem> items;
   final int currentIndex;
   final Function(int) onTap;
@@ -15,7 +16,7 @@ class WebGlobalNavigationBar extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: items.asMap().entries.map((entry) {

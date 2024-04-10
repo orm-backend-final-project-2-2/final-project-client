@@ -4,7 +4,9 @@ class WebHomeBanner extends StatelessWidget {
   const WebHomeBanner({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ) {
+    // currentIndex Provider의 값을 읽습니다.
+
     return Container(
       height: 400,
       color: Colors.white,
