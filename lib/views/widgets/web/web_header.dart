@@ -7,33 +7,66 @@ class WebHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
-      height: 80,
-      alignment: Alignment.center,
-      child: const SizedBox(
-        width: 1200,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                FlutterLogo(size: 40),
-                SizedBox(width: 10),
-                Text(
-                  'CodeFit',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
+        color: Colors.blue,
+        height: 70,
+        alignment: Alignment.center,
+        child: SizedBox(
+          width: 1200,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      print('CodeFit');
+                    },
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.code,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          'CodeFit',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                          ),
+                        ),
+                      ],
+                    )
                   ),
-                ),
-                SizedBox(width: 10),
-                WebGlobalNavigationBar(),
-                SizedBox(width: 10),
-              ],
-            ),
-          ],
-        ),
-      )
-    );
+                  const SizedBox(width: 20),
+                  WebGlobalNavigationBar(
+                    items: [
+                      WebGlobalNavigationBarItem(label: 'Home'),
+                      WebGlobalNavigationBarItem(label: 'Profile'),
+                      WebGlobalNavigationBarItem(label: 'Settings'),
+                    ],
+                    currentIndex: 0,
+                    onTap: (int index) {
+                      switch (index) {
+                        case 0:
+                          print('Home');
+                          break;
+                        case 1:
+                          print('Profile');
+                          break;
+                        case 2:
+                          print('Settings');
+                          break;
+                      }
+                    },
+                  ),
+                ],
+              ),
+              Container(
+                    width: 100,
+                    color: Colors.white,
+                  )
+            ]
+          ),
+        ));
   }
 }
