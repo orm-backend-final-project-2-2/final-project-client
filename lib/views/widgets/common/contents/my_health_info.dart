@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CommunityContent extends StatelessWidget {
-  const CommunityContent({Key? key}) : super(key: key);
+class MyHealthInfoContent extends StatelessWidget {
+  const MyHealthInfoContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class CommunityContent extends StatelessWidget {
       color: Colors.black,
       child: const Center(
         child: Text(
-          'Community Content',
+          'My Health Info',
           style: TextStyle(
             color: Colors.white,
             fontSize: 24,

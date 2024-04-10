@@ -1,16 +1,18 @@
-import 'package:codefit/views/widgets/common/contents/home_content.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:codefit/utils/providers.dart';
 
-class MainContent extends StatelessWidget {
+class MainContent extends ConsumerWidget {
   const MainContent({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final currentContent = ref.watch(currentContentProvider);
 
-    return const SizedBox(
+    return SizedBox(
       width: 1200,
       height: 800,
-      child: HomeContent(),
+      child: currentContent,
     );
   }
 }
